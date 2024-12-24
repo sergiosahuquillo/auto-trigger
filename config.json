@@ -1,0 +1,14 @@
+{
+    "processes": [
+        {
+            "name": "notepad.exe",
+            "launchCommand": "echo Notepad iniciado",
+            "endCommand": "echo Notepad cerrado"
+        },
+        {
+            "name": "chrome.exe",
+            "launchCommand": "echo Chrome detectado",
+            "endCommand": "echo Chrome cerrado"
+        }
+    ]
+}
