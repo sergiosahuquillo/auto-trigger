@@ -1,14 +1,15 @@
 {
+    "settings": {
+        "RTSSExecutableName": "RTSS.exe",
+        "RTSSHooksLoaderName": "RTSSHooksLoader64.exe",
+        "RTSSProfileLocation": "C:\\Program Files (x86)\\RivaTuner Statistics Server\\Profiles\\Global"
+    },
     "processes": [
         {
-            "name": "notepad.exe",
+            "name": "7DaysToDie.exe",
+            "fps": 83,
             "launchCommand": "echo Notepad iniciado",
             "endCommand": "echo Notepad cerrado"
-        },
-        {
-            "name": "chrome.exe",
-            "launchCommand": "echo Chrome detectado",
-            "endCommand": "echo Chrome cerrado"
         }
     ]
 }

@@ -1,6 +1,7 @@
 import { exec } from 'child_process';
 import fs from 'fs';
 import psList from 'ps-list';
+import updateFpsLimit from './fpsRestrictor.js';
 
 // Read config from config.json
 const config = JSON.parse(fs.readFileSync('../config.json', 'utf8'));
@@ -35,13 +36,15 @@ setInterval(async () => {
         if (activeProcess) {
             if(!detectedProcesses[process.name]){
                 console.log(`Process ${process.name} detected`);
-                launchCommand(process.launchCommand);
+                updateFpsLimit(process.fps);
+                //launchCommand(process.launchCommand);
             }
             actualProcesses[process.name] = true;
         }else{
             if(detectedProcesses[process.name]){
                 console.log(`Process ${process.name} ended`);
-                launchCommand(process.endCommand);
+                updateFpsLimit(0);
+                //launchCommand(process.endCommand);
             }
         }
     });
